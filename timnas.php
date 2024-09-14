@@ -58,24 +58,22 @@ $timnas = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pemain Timnas Indonesia</title>
-    <style>
-        .gambar {
-            height: 200px;
-            width: 200px;
-            border-radius: 8px;
-        }
-    </style>
+    <title>Pemain Timnas</title>
 </head>
 <body>
     <h1>Pemain Timnas Indonesia</h1>
-    <?php foreach($timnas as $tim) : ?>
-        <ul>
-        <img class="gambar" src="img/<?= $tim["gambar"];?> ">    
-        <li>Nama: <?= $tim["nama"]?> </li>
-        <li>Lahir: <?= $tim["Lahir"]?> </li>
-        <li>Klub: <?= $tim["Klub"]?> </li>
+    <ul>
+        <?php foreach($timnas as $tim) :?>
+            <li>
+                <a href="lat2.php?nama=
+                <?=$tim["nama"];?>&Lahir=
+                <?=$tim["Lahir"];?>&Klub=
+                <?=$tim["Klub"];?>&gambar=
+                <?=$tim["gambar"];?>
+                "><?=$tim["nama"];?></a>
+            </li>
+        <?php endforeach; ?>
     </ul>
-    <?php endforeach; ?>
+    
 </body>
 </html>
